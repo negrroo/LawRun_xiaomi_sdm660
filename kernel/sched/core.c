@@ -9707,7 +9707,6 @@ static void cpu_util_update_eff(struct cgroup_subsys_state *css)
 	unsigned int clamps;
 
 	lockdep_assert_held(&uclamp_mutex);
-	SCHED_WARN_ON(!rcu_read_lock_held());
 
 	css_for_each_descendant_pre(css, top_css) {
 		uc_parent = css_tg(css)->parent
