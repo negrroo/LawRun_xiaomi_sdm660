@@ -39,7 +39,7 @@ struct msm_camera_sensor_slave_info32 {
 	struct msm_sensor_id_info_t sensor_id_info;
 	struct msm_vendor_id_info_t vendor_id_info;
 	struct msm_vcm_id_info_t vcm_id_info;
-#ifdef CONFIG_KERNEL_CUSTOM_F7A
+#ifdef CONFIG_MACH_XIAOMI_NEW_CAMERA
 	struct msm_lens_id_info_t lens_id_info;
 #endif
 	struct msm_sensor_power_setting_array32 power_setting_array;
