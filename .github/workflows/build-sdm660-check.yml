@@ -1,4 +1,4 @@
-name: Build sdm660 compile check (lavender-perf)
+name: Build sdm660 compile check (lavender LawRun_defconfig)
 on:
   push:
     branches: [next-4.4-st79-donors]
@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        dev: [lavender-perf]
+        dev: [LawRun]
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 1 }
