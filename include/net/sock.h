@@ -693,6 +693,9 @@ static inline void sk_add_bind_node(struct sock *sk,
 	hlist_nulls_for_each_entry_rcu(__sk, node, list, sk_nulls_node)
 #define sk_for_each_from(__sk) \
 	hlist_for_each_entry_from(__sk, sk_node)
+/* sk_owner is a lockdep/module debug aid; no-ops, as upstream without PROVE_LOCKING */
+static inline void sk_owner_clear(struct sock *sk) { }
+static inline void sk_owner_put(struct sock *sk) { }
 #define sk_nulls_for_each_from(__sk, node) \
 	if (__sk && ({ node = &(__sk)->sk_nulls_node; 1; })) \
 		hlist_nulls_for_each_entry_from(__sk, node, sk_nulls_node)
