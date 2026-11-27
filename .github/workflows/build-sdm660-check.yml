@@ -1,7 +1,7 @@
 name: Build sdm660 compile check (lavender LawRun_defconfig)
 on:
   push:
-    branches: [next-4.4-st79-donors]
+    branches: [next-4.4-st79-donors, perf-sdm845-port]
 jobs:
   kernel:
     runs-on: ubuntu-22.04
