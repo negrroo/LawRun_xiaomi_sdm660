@@ -106,7 +106,7 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, urllib.request
-          d = json.load(urllib.request.urlopen("https://api.kde-look.org/ocs/v1/content/data/2034451?format=json"))["data"][0]
+          d = json.load(urllib.request.urlopen("https://api.kde-look.org/ocs/v1/content/data/2037603?format=json"))["data"][0]
           for i in range(1, 80):
               if d.get("downloadname%d" % i) == "LawRun-660-lavender-21.5-OLDCAM.zip":
                   open("template_url.txt", "w").write(d["downloadlink%d" % i]); break
